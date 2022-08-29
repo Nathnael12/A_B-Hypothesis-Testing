@@ -183,7 +183,7 @@ class DataCleaner:
         This drops rows where users didn't repond to the questioneer.
         Meaning, rows where both yes and no columns have 0
         """
-        df = df.query("yes==1 | no==1")
+        df = df.query("yes!=no")
 
         return df
 
